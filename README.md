@@ -1,6 +1,6 @@
 # Dự Án Phân Tích Y Tế: Dự Đoán Nguy Cơ Tái Nhập Viện
 
-Dự án này là một bài tập thực hành Phân tích Dữ liệu (Data Analyst), tập trung vào việc dự đoán nguy cơ tái nhập viện trong vòng 30 ngày của bệnh nhân tiểu đường.
+Dự án thực hành Phân tích Dữ liệu (Data Analyst), tập trung vào việc dự đoán nguy cơ tái nhập viện trong vòng 30 ngày của bệnh nhân tiểu đường.
 
 ## Mục tiêu Dự án
 1.  Làm sạch và khám phá bộ dữ liệu y tế phức tạp (UCI Diabetes 130-US Hospitals).
