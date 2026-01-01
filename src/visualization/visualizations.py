@@ -7,7 +7,7 @@ def create_visualizations():
     print("Đang tạo các trực quan hóa chuyên sâu...")
     df = pd.read_csv('data/processed/diabetes_cleaned.csv')
     
-    # Thiết lập style
+    # Style
     sns.set_theme(style="whitegrid")
     
     # 1. Heatmap tương quan giữa các biến số
@@ -29,7 +29,7 @@ def create_visualizations():
     plt.close()
     
     # 3. Phân tích HbA1c Result và Readmission
-    # Lưu ý: A1Cresult có nhiều giá trị thiếu, chúng ta chỉ lấy các giá trị có sẵn
+    # Lưu ý: A1Cresult có nhiều giá trị thiếu, chỉ lấy các giá trị có sẵn
     a1c_df = df[df['A1Cresult'].notnull()]
     plt.figure(figsize=(10, 6))
     sns.pointplot(x='A1Cresult', y='readmitted_binary', data=a1c_df, linestyles='none')

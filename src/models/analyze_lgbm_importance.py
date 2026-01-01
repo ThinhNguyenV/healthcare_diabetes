@@ -16,19 +16,19 @@ def analyze_importance():
     
     model = joblib.load(model_path)
     
-    # Danh sách đặc trưng (phải khớp với lúc huấn luyện)
+    # Danh sách đặc trưng
     features = ['race', 'gender', 'age', 'time_in_hospital', 'num_lab_procedures', 
                 'num_procedures', 'num_medications', 'number_outpatient', 
                 'number_emergency', 'number_inpatient', 'number_diagnoses', 
                 'change', 'diabetesMed']
     
-    # 1. Importance by Split (Số lần dùng để chia nhánh)
+    # 1. Importance by Split (Số lần sử dụng để chia nhánh)
     importance_split = model.booster_.feature_importance(importance_type='split')
     
     # 2. Importance by Gain (Mức độ đóng góp vào việc giảm loss)
     importance_gain = model.booster_.feature_importance(importance_type='gain')
     
-    # Tạo DataFrame kết quả
+    # DataFrame kết quả
     importance_df = pd.DataFrame({
         'Feature': features,
         'Split': importance_split,
