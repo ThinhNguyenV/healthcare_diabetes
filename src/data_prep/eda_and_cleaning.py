@@ -5,7 +5,7 @@ import seaborn as sns
 import os
 
 def perform_eda():
-    print("Bắt đầu EDA và làm sạch dữ liệu...")
+    print("EDA và làm sạch dữ liệu")
     df = pd.read_csv('data/raw/diabetes_data_raw.csv', low_memory=False)
     
     # 1. Kiểm tra thông tin cơ bản
