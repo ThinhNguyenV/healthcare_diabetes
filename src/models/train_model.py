@@ -10,7 +10,7 @@ import joblib
 import os
 
 def train_model():
-    print("Bắt đầu huấn luyện mô hình...")
+    print("Train model")
     df = pd.read_csv('data/processed/diabetes_cleaned.csv')
     
     # 1. Feature Engineering & Selection
@@ -32,7 +32,7 @@ def train_model():
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
     
     # 3. Train Random Forest
-    print("Đang huấn luyện Random Forest...")
+    print("Training Random Forest model")
     rf = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42)
     rf.fit(X_train, y_train)
     

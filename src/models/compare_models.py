@@ -34,7 +34,7 @@ def compare_models():
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
     
     # 3. Apply SMOTE to training data
-    print("Đang áp dụng SMOTE để cân bằng dữ liệu...")
+    print("Đang áp dụng SMOTE để cân bằng dữ liệu")
     smote = SMOTE(random_state=42)
     X_train_res, y_train_res = smote.fit_resample(X_train, y_train)
     print(f"Kích thước tập huấn luyện sau SMOTE: {X_train_res.shape}")
@@ -65,7 +65,7 @@ def compare_models():
             'ROC AUC': roc_auc_score(y_test, y_prob)
         })
         
-        # Lưu mô hình tốt nhất (ví dụ dựa trên ROC AUC)
+        # Lưu mô hình tốt nhất 
         joblib.dump(model, f'models/diabetes_{name.lower().replace(" ", "_")}_model.pkl')
 
     # 6. Visualize Results

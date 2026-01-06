@@ -57,7 +57,7 @@ def perform_eda():
     if not os.path.exists('data/processed'):
         os.makedirs('data/processed')
     df.to_csv('data/processed/diabetes_cleaned.csv', index=False)
-    print(f"\nĐã làm sạch dữ liệu. Số lượng bản ghi còn lại: {len(df)}")
+    print(f"\nĐã làm sạch dữ liệu. Số lượng record còn lại: {len(df)}")
     print("Dữ liệu đã được lưu vào data/processed/diabetes_cleaned.csv")
 
 if __name__ == "__main__":
